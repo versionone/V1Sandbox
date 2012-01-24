@@ -42,7 +42,7 @@ desc "Builds the solution (default task)."
 task :build => [:build_v1, :build_dmanalytics, :run_datamart]
 
 
-task :buld_v1 => [:unzip_v1, :restore_v1, :upgrade_v1]
+task :build_v1 => [:unzip_v1, :restore_v1, :upgrade_v1]
 task :build_dmanalytics => [:unzip_analytics, :restore_analytics, :upgrade_datamart, :upgrade_analytics]
 
 task :unzip => [:unzip_v1, :unzip_analytics]
