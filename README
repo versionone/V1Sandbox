@@ -1,6 +1,6 @@
-This repository contains the rakefile for the nightly update of the V1 production sandbox on prod01.
+This repository contains the rakefile for the nightly update of the V1 production sandbox on dev2012.
 
-If it is changed, the rakefile needs to be manually updated on prod01, since Git is not installed on prod01 (yet).
+If it is changed, the rakefile needs to be manually updated on dev2012, since Git is not installed on dev2012 (yet).
 
-\\prod01\e$\V1ProdSandbox
+\\dev2012\c$\V1Sandbox
 
