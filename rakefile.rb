@@ -103,7 +103,10 @@ task :restore_v1 do
 		EXECUTE ('KILL ' + @spid)
 		SELECT @spid = min(spid) FROM master.dbo.sysprocesses WHERE dbid = db_id('#{@v1_db_name}') AND spid > @spid
 		END
-		RESTORE DATABASE @dbname FROM DISK = N'#{backup_file}' WITH FILE = 1, NOUNLOAD, REPLACE, STATS = 10, MOVE 'V1Production' TO '#{@database_dir}\\#{@v1_db_name}.mdf', MOVE 'V1Production_1' TO '#{@database_dir}\\#{@v1_db_name}.ldf', MOVE 'ftrow_V1Production' TO '#{@database_dir}\\#{@v1_db_name}.ndf'
+		RESTORE DATABASE @dbname FROM DISK = N'#{backup_file}' WITH FILE = 1, NOUNLOAD, REPLACE, STATS = 10,
+		MOVE 'V1Production' TO '#{@database_dir}\\#{@v1_db_name}.mdf',
+		MOVE 'V1Production_log' TO '#{@database_dir}\\#{@v1_db_name}.ldf',
+		MOVE 'V1Production_fts' TO '#{@database_dir}\\#{@v1_db_name}.ndf'
 	}.gsub('/', '\\')
     f = File.open(@prod_sql_restore_commandfile, "w")
     f.write(cmd)
