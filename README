@@ -1,6 +1,6 @@
 This repository contains the rakefile for the nightly update of the V1 production sandbox on dev2012.
 
-If it is changed, the rakefile needs to be manually updated on dev2012, since Git is not installed on dev2012 (yet).
+If it is changed, the rakefile needs to be manually updated on dev2012 and dev2012Web, since Git is not installed on dev2012 (yet).
 
 \\dev2012\c$\V1Sandbox
 
