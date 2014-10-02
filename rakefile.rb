@@ -50,7 +50,7 @@ task :restore => [:info_display, :restore_v1, :restore_analytics]
 
 task :unzip_restore => [:unzip, :restore]
 
-task :upgrade => [:info_display, :upgrade_v1, :upgrade_analytics, :upgrade_datamart, :run_datamart]
+task :upgrade => [:info_display, :upgrade_v1, :upgrade_datamart, :upgrade_analytics, :run_datamart]
 
 ###############################################################################
 # Clean
